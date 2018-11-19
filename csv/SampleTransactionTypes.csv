@@ -1,0 +1,11 @@
+"description","type"
+"Payment              ",1
+"WithdrawalReserve    ",2
+"OrderReserve         ",4
+"OrderRelease         ",5
+"TradeDebit           ",6
+"TradeCredit          ",7
+"BrokerDebit          ",14
+"BrokerCredit         ",15
+"TradeBidFeeDebit     ",22
+"TradeAskFeeDebit     ",24

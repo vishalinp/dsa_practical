@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542553703257.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "96B77D7B",
+    "lastKnownWriteTime" : 1542585122,
+    "last_content_update" : 1542585122958,
+    "path" : "~/R Projects/dsa_prac/main.R",
+    "project_path" : "main.R",
+    "properties" : {
+        "cursorPosition" : "69,49",
+        "scrollLine" : "60",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

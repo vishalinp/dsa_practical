@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542554288808.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2A49EA78",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1542554288808,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B754BE48",
+        "caption" : "ledgerEntries",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=ledgerEntries&cache_key=B754BE48",
+        "displayedObservations" : 1104,
+        "environment" : "",
+        "object" : "ledgerEntries",
+        "preview" : 0,
+        "totalObservations" : 1104,
+        "variables" : 5
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

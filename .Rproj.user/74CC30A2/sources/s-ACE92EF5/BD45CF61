@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542583553198.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BD45CF61",
+    "lastKnownWriteTime" : 27866456492998767,
+    "last_content_update" : 1542583553198,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "34DE718C",
+        "caption" : "rate",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=rate&cache_key=34DE718C",
+        "displayedObservations" : "13846",
+        "environment" : "",
+        "object" : "rate",
+        "preview" : "0",
+        "totalObservations" : "13846",
+        "variables" : "4"
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

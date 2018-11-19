@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542561505073.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "26513431",
+    "lastKnownWriteTime" : 32651513914720368,
+    "last_content_update" : 1542561505073,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C7A17D6D",
+        "caption" : "focusCustomerStatement2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=focusCustomerStatement2&cache_key=C7A17D6D",
+        "displayedObservations" : 86,
+        "environment" : "",
+        "object" : "focusCustomerStatement2",
+        "preview" : 0,
+        "totalObservations" : 86,
+        "variables" : 8
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

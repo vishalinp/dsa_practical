@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542557124267.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F72A5107",
+    "lastKnownWriteTime" : 8007511688124658464,
+    "last_content_update" : 1542557124267,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "39AF5B9",
+        "caption" : "transactions",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=transactions&cache_key=39AF5B9",
+        "displayedObservations" : "67",
+        "environment" : "",
+        "object" : "transactions",
+        "preview" : "0",
+        "totalObservations" : "67",
+        "variables" : "7"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

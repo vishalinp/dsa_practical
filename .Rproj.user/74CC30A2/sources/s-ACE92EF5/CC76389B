@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542574767869.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CC76389B",
+    "lastKnownWriteTime" : 7598807741480460658,
+    "last_content_update" : 1542574767869,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "5E4B90CC",
+        "caption" : "transactionTypes",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=transactionTypes&cache_key=5E4B90CC",
+        "displayedObservations" : 10,
+        "environment" : "",
+        "object" : "transactionTypes",
+        "preview" : 0,
+        "totalObservations" : 10,
+        "variables" : 2
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
