@@ -1,0 +1,5 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"defd74adcbc93ad2edcd801d7511bb47","2016-06-14 18:55:40",1,"XBT","ReceiveBTC",0.00018,0.1229076
+"defd74adcbc93ad2edcd801d7511bb47","2016-07-20 19:27:14",1,"XBT","ReceiveBTC",7.485e-05,0.0499526445
+"defd74adcbc93ad2edcd801d7511bb47","2016-07-23 18:10:49",1,"XBT","ReceiveBTC",6.99e-05,0.04595925
+"defd74adcbc93ad2edcd801d7511bb47","2016-07-26 22:54:34",1,"XBT","SendBTC",-0.00032475,-0.21330879

@@ -1,0 +1,2 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"932016525bed149bacd07e28d1659edd","2016-05-09 11:30:17",1,"XBT","ReceiveBTC",0.01,4.6002

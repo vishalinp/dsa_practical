@@ -1,0 +1,4 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"4641e1094573d4de3a77d9969580d09c","2016-11-20 21:52:37",1,"ZAR","FiatDeposit",10,150.911993015102
+"4641e1094573d4de3a77d9969580d09c","2016-11-21 10:12:33",4,"ZAR","Bid",0,0
+"4641e1094573d4de3a77d9969580d09c","2016-11-22 05:39:30",15,"XBT","BuyBTC",0.00026,0.1940016

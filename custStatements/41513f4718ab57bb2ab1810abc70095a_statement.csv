@@ -1,0 +1,2 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"41513f4718ab57bb2ab1810abc70095a","2016-11-26 08:23:18",1,"ZAR","FiatDeposit",1000,15056.591742388

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542725384221.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3736147832",
+    "id" : "89B6766D",
+    "lastKnownWriteTime" : 1542841184,
+    "last_content_update" : 1542841184250,
+    "path" : "~/R Projects/dsa_practical/tasks.R",
+    "project_path" : "tasks.R",
+    "properties" : {
+        "cursorPosition" : "110,0",
+        "scrollLine" : "91",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

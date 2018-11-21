@@ -16,12 +16,6 @@ fact <- ledgerEntries %>%
   inner_join(accounts, by='account_id') %>%
   inner_join(transactionTypes, by='type')
 
-##Join to closest USD conversion rates
-fact_converted <- fact %>%
-  mutate(pair = paste0(currency, 'USD'), ledgerTimeStamp = as.integer(as_datetime(created_at)))
-  inner_join(mutate(rates, timestamp=timestamp/1000), by='pair')
-
-
 
 #Find customer of interest to understand transactions
 focusCustomer <- fact %>%
@@ -35,10 +29,13 @@ focusCustomerStatement <- fact %>%
   arrange(created_at)
 
 focusCustomerStatement2 <- fact %>%
-  filter(customer_id == '1cf4eac9d442eda8329403546901e682'[[1]], (currency=='XBT' & type %in% c(1,4,6,7,14,15,22,24)) | (currency!='XBT' & type %in% c(1,4))) %>%
+  filter(customer_id == '1cf4eac9d442eda8329403546901e682'[[1]]) %>%
+  group_by(account_id) %>%
   arrange(created_at) %>%
   mutate(balance = balance_1e8/1e8, available = available_1e8/1e8) %>%
   mutate(bal_diff = balance - ifelse(is.na(lag(balance)), 0, lag(balance))) %>%
+  ungroup() %>%
+  filter((currency=='XBT' & type %in% c(1,4,6,7,14,15,22,24)) | (currency!='XBT' & type %in% c(1,4))) %>%
   mutate(transaction_name = case_when(.$type==1 ~ ifelse(bal_diff > 0, ifelse(currency=='XBT', 'ReceiveBTC', 'FiatDeposit'), ifelse(currency=='XBT', 'SendBTC', 'FiatWithdrawal')),
                                       .$type==4 ~ ifelse(currency=='XBT', 'Ask', 'Bid'),
                                       .$type==6 ~ 'TradeSell',
@@ -48,35 +45,79 @@ focusCustomerStatement2 <- fact %>%
                                       .$type==22 ~ 'TradeBidFeeDebit',
                                       .$type==24 ~ 'TradeAskFeeDebit')) %>%
   mutate(ledgerTimestamp = as.integer(as_datetime(created_at))) %>%
-  mutate(amount_usd = bal_diff * get_usd_rate(currency, ledgerTimestamp))
+  rowwise()%>%
+  dplyr::mutate(amount_usd = bal_diff * get_usd_rate(currency, ledgerTimestamp),
+         rate = get_usd_rate(currency, ledgerTimestamp),
+         tdiff_min = get_rate_tdiff(currency, ledgerTimestamp)) %>%
+  select(customer_id, created_at, type, currency, transaction_name, bal_diff, amount_usd) %>%
+  rename(transaction_amount = bal_diff, transaction_amount_usd = amount_usd)
 
 
 get_usd_rate <- function(currency, l_timestamp)
 {
-  rate <- NA
-  
   rate_row_xbtusd <- rates %>%
     filter(pair == 'XBTUSD') %>%
     mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
     arrange(diff_sec) %>%
     slice(1)
   
-  if(currency=='XBT')
-  {
-    rate <- as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6)
-  }else
-  {
-    rate_row_toxbt <- rates %>%
-      filter(pair == paste0('XBT', currency)) %>%
-      mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
-      arrange(diff_sec) %>%
-      slice(1)
-    
-    rate <- as.numeric(rate_rowtoxbt$exchange_rate_1e6[1]/1e6)/as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6)
-  }
-  rate
+  rate_row_toxbt <- rates %>%
+    filter(pair == paste0('XBT', currency)) %>%
+    mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
+    arrange(diff_sec) %>%
+    slice(1)
+  
+  ifelse(currency == 'XBT', as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6),
+         as.numeric(rate_row_toxbt$exchange_rate_1e6[1]/1e6)/as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6))
 }
 
+
+get_usd_rate <- function(currency, l_timestamp)
+{
+  rate_row_xbtusd <- rates %>%
+    filter(pair == 'XBTUSD') %>%
+    mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
+    arrange(diff_sec) %>%
+    slice(1)
+  
+  as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6)
+}
+
+get_xbt_rate <- function(currency, l_timestamp)
+{
+  rate_row_xbtusd <- rates %>%
+    filter(pair == 'XBTUSD') %>%
+    mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
+    arrange(diff_sec) %>%
+    slice(1)
+  
+  rate_row_toxbt <- rates %>%
+    filter(pair == paste0('XBT', currency)) %>%
+    mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
+    arrange(diff_sec) %>%
+    slice(1)
+  
+    as.numeric(rate_row_toxbt$exchange_rate_1e6[1]/1e6)/as.numeric(rate_row_xbtusd$exchange_rate_1e6[1]/1e6)
+}
+
+
+get_rate_tdiff <- function(currency, l_timestamp)
+{
+  tdiff <- NA
+  
+  rate_row_xbtusd <- rates %>%
+    filter(pair == 'XBTUSD') %>%
+    mutate(diff_sec = abs(l_timestamp - timestamp/1000.0)) %>%
+    arrange(diff_sec) %>%
+    slice(1)
+
+    tdiff <- as.numeric(rate_row_xbtusd$diff_sec[1]/60)
+    
+    tdiff
+}
+
+
+##rough
 rate <- rates %>%
   filter(pair == 'XBTUSD') %>%
   mutate(diff_sec = abs(1433119759298 - timestamp/1000.0)) %>%
@@ -84,7 +125,11 @@ rate <- rates %>%
   slice(1) %>%
   as.numeric(.$exchange_rate_1e6[1]/1e6)
 
-
+rate_row_xbtusd <- rates %>%
+  filter(pair == 'XBTUSD') %>%
+  mutate(diff_sec = abs(1439117772 - timestamp/1000.0)) %>%
+  arrange(diff_sec) %>%
+  slice(1)
 
 
 

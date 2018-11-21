@@ -1,0 +1,7 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"d272afac5ec560a924e434c6c9326c4c","2016-11-06 11:14:15",1,"MYR","FiatDeposit",2,8.15084648773884
+"d272afac5ec560a924e434c6c9326c4c","2016-11-06 11:16:39",15,"XBT","BuyBTC",0.00016,0.1146384
+"d272afac5ec560a924e434c6c9326c4c","2016-11-07 06:44:37",1,"MYR","FiatDeposit",5,20.5995149737747
+"d272afac5ec560a924e434c6c9326c4c","2016-11-07 06:53:54",15,"XBT","BuyBTC",0.00039,0.2766036
+"d272afac5ec560a924e434c6c9326c4c","2016-11-08 15:51:57",14,"XBT","SellBTC",-0.00055,-0.3917595
+"d272afac5ec560a924e434c6c9326c4c","2016-11-08 15:52:26",15,"XBT","BuyBTC",0.00053,0.3775137

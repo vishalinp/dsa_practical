@@ -1,0 +1,4 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"99bc2cd27371f93402e00f82af2597e7","2016-05-05 08:32:26",1,"NGN","FiatDeposit",24502.2,4875835.36240882
+"99bc2cd27371f93402e00f82af2597e7","2016-05-05 10:31:49",15,"XBT","BuyBTC",0.05975,26.84926
+"99bc2cd27371f93402e00f82af2597e7","2016-05-06 11:13:03",1,"XBT","SendBTC",-0.05975,-27.0996125

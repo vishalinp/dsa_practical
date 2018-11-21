@@ -1,0 +1,4 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"9fd4e3423da76fbba14532ef66928bd6","2016-01-18 21:07:12",1,"XBT","ReceiveBTC",0.375,145.03125
+"9fd4e3423da76fbba14532ef66928bd6","2016-01-19 11:38:23",1,"XBT","SendBTC",-0.121449,-47.04327015
+"9fd4e3423da76fbba14532ef66928bd6","2016-01-19 11:38:26",1,"XBT","SendBTC",-0.25,-96.8375

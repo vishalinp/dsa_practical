@@ -1,0 +1,23 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-09 13:25:36",1,"NGN","FiatDeposit",40031.97,14433861.064849
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-09 13:39:41",15,"XBT","BuyBTC",0.08762,50.5076728
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-10 04:07:01",1,"XBT","SendBTC",-0.08762,-50.6943034
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-11 16:04:56",1,"NGN","FiatDeposit",100031.97,33367643.8655571
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-11 20:39:49",15,"XBT","BuyBTC",0.245,143.84195
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-11 20:57:22",1,"XBT","SendBTC",-0.245,-143.5847
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-12 21:03:39",1,"XBT","ReceiveBTC",0.185,124.32555
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-15 12:19:25",1,"XBT","SendBTC",-0.185,-126.4105
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-22 01:00:23",1,"XBT","ReceiveBTC",0.01187905,8.0187151215
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-22 13:17:33",1,"XBT","SendBTC",-0.01,-6.649
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-25 07:11:24",1,"NGN","FiatDeposit",60031.97,20163852.1180062
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-25 07:26:59",15,"XBT","BuyBTC",0.13615,92.7685255
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-25 07:37:50",1,"XBT","SendBTC",-0.13802,-94.0426874
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-30 09:47:39",1,"NGN","FiatDeposit",60031.97,20644063.3341009
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-06-30 09:53:35",15,"XBT","BuyBTC",0.13493,86.7208603
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-02 08:34:07",1,"XBT","SendBTC",-0.13493,-91.7402563
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-03 10:03:52",1,"NGN","FiatDeposit",70031.97,24696799.7879412
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-03 16:22:30",15,"XBT","BuyBTC",0.13795,90.851111
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-04 12:29:04",1,"XBT","SendBTC",-0.13795,-92.6099735
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-11 02:53:47",1,"NGN","FiatDeposit",300031.97,105067606.236392
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-12 03:51:42",15,"XBT","BuyBTC",0.58809,384.2991723
+"fd537cf4cfc6eeb2f375e03fbdf51efc","2016-07-12 03:54:36",1,"XBT","SendBTC",-0.588,-384.24036

@@ -1,0 +1,3 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"b693cbe3d6b569feea0b024f30cfb7bb","2016-05-07 15:38:19",1,"NGN","FiatDeposit",50062.67,15453120.7529944
+"b693cbe3d6b569feea0b024f30cfb7bb","2016-06-09 15:31:06",1,"NGN","FiatWithdrawal",-50062.67,-18172824.4974158

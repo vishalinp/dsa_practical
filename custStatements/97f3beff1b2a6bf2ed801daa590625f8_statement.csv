@@ -1,0 +1,4 @@
+"customer_id","created_at","type","currency","transaction_name","transaction_amount","transaction_amount_usd"
+"97f3beff1b2a6bf2ed801daa590625f8","2016-11-09 08:53:56",1,"MYR","FiatDeposit",1000,4126.86849063731
+"97f3beff1b2a6bf2ed801daa590625f8","2016-11-09 08:57:30",4,"MYR","Bid",0,0
+"97f3beff1b2a6bf2ed801daa590625f8","2016-11-12 00:09:23",15,"XBT","BuyBTC",0.0772,55.688992
