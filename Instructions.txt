@@ -1,0 +1,5 @@
+Final answer table found in /finalAnswer/all_tasks.csv
+
+Additionally, individual customer statements have been output to /custStatements
+
+Simply sourcing the tasks.R file will regenerate the entire workflow, repopulating the customer statements and regenerating the final answer table.
